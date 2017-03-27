@@ -178,8 +178,7 @@ function insertChirp(id, message, timestamp, userID) {
 }
 app.post('/api/chirps', function (req, res) {
     insertChirp(req.params.id, req.body.message, req.body.timestamp, req.body.userID).then(function (data) {
-        res.send(data[0]);
-        res.status(201).end();
+        res.sendStatus(201).end();
     }, function (err) {
         console.log(err);
         res.sendStatus(500);

@@ -23,11 +23,11 @@
     </div>
     <div id="chirp-container"></div>
     <li class="li class='list-group-item list-group-item-success">
-        {{chirp[0].UserName}}:
-        {{chirp[0].message}}
+        {{chirp.UserName}}:
+        {{chirp.message}}
     </li>
     <button id="editbtn" ng-click="updateBtn(chirp[0].id)">Edit</button>
-    <button id="delbtn" ng-click="deleteChirp()">Delete</button>
+    <button id="delbtn" ng-click="deleteChirp(chirp[0].id)">Delete</button>
 </body>
 
 </html>

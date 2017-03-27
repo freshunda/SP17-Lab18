@@ -26,7 +26,7 @@
                 <div class="input-group">
                     <input id="target" type="text" class="form-control" placeholder="Enter new chirp!">
                     <span class="input-group-btn">
-                <button id="btn" class="btn btn-default" type="button">Chirp!</button>
+                <button id="btn" class="btn btn-default" type="button" ng-click="postChirp()">Chirp!</button>
             </span>
                 </div>
             </div>
@@ -34,7 +34,7 @@
     </div>
     <label>Users</label>
     <select class="drop-down">
-        <option ng-repeat="user in users">{{user.Name}}</option>
+        <option ng-repeat="user in users" value="{{user.UserID}}">{{user.Name}}</option>
                 </select>
     <div class="row">
         <ul ng-repeat="chirp in chirps" class="list-group">
